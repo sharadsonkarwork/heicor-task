@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Heicor | Music Web Player</title>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a class="navbar-brand" href="#" title="Heicor">
+                        <img src="images/logo.png" alt="Heicor | Logo">
+                    </a>
+                </div>
+                <div class="drp-menu">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <div class="acc-profile">
+                              <div class="user-avatar">
+                                  <img src="images/avatar.png" alt="Heicor | User-avatar">
+                              </div>
+                              <div class="avatar-name">
+                                  Surbhi Joyti
+                              </div>
+                              <span class="drp-caret">
+                                <img src="images/down-arrow.png" alt="Heicor | icon-dropdown">
+                              </span>
+                          </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Your Account</a>
+                          <a class="dropdown-item" href="#">Your Cart</a>
+                          <a class="dropdown-item" href="#">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <article>
+        <section class="main-body">
+            <div class="container-fluid">
+                <div class="breadcrumbs-wrapper">                      
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="#">Home</a></li>
+                          <li class="breadcrumb-item"><a href="#">Music</a></li>
+                          <li class="breadcrumb-item"><a href="#">Genre</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Artist</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="music-card-wrapper">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <form class="search-form">
+                                <select class="select-dropdown" id="normal-select-2" placeholder-text="Music">
+                                    <option value="1" class="select-dropdown-list-item">Music</option>
+                                    <option value="2" class="select-dropdown-list-item">Album</option>
+                                </select>
+                                <div class="form-group">
+                                    <input type="text" id="artistName" class="form-control" placeholder="Artist Name">
+                                </div>
+                                <input type="submit" value="Go" class="btn-theme">
+                            </form>
+                            <div class="related-artist-wrapper list-show">
+                                <h4 class="heading">Related Artist</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Artist 01">
+                                            <div class="white-card">
+                                                <div class="artist-avartar">
+                                                    <img src="images/artist.png" alt="Heicor | Artist Avatar">
+                                                </div>
+                                                <div class="artist-info">
+                                                    <p class="artist-name">Mithoon</p>
+                                                    <span>Popular album: Malang</span>
+                                                    <span>Total 50 albums</span>
+                                                </div>
+                                                <div class="icon-play">
+                                                    <img src="images/play.png" alt="Heicor | Icon Play">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Artist 02">
+                                            <div class="white-card">
+                                                <div class="artist-avartar">
+                                                    <img src="images/artist.png" alt="Heicor | Artist Avatar">
+                                                </div>
+                                                <div class="artist-info">
+                                                    <p class="artist-name">Mithoon</p>
+                                                    <span>Popular album: Malang</span>
+                                                    <span>Total 50 albums</span>
+                                                </div>
+                                                <div class="icon-play">
+                                                    <img src="images/play.png" alt="Heicor | Icon Play">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="popular-track-wrapper list-show">
+                                <h4 class="heading">Popular Tracks</h4>
+                                <ul>
+                                    <li>
+                                        <div class="white-card">
+                                            <div class="song-info">
+                                                <p class="song-name">Tujhe Kitna Chahne Lage</p>
+                                                <span>4:44</span>
+                                            </div>
+                                            <div class="wave">
+                                                <div id='bars'>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                </div>
+                                            </div>
+                                            <div class="icon-play">
+                                                <a href="javascript:void(0)" class="play" onclick="playAudio()" type="button" id="play-pause">
+                                                    <audio id="track">
+                                                        <source src="images/song.mp3" type="audio/mpeg" />
+                                                    </audio>
+                                                    <img src="images/play.png" class="img-play" alt="Heicor | Icon Play">
+                                                    <img src="images/pause.png" class="img-pause" alt="Heicor | Icon pause">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="white-card">
+                                            <div class="song-info">
+                                                <p class="song-name">Tujhe Kitna Chahne Lage</p>
+                                                <span>4:44</span>
+                                            </div>
+                                            <div class="wave">
+                                                <div id='bars'>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                    <div class='bar'></div>
+                                                </div>
+                                            </div>
+                                            <div class="icon-play">
+                                                <a href="javascript:void(0)" class="play" onclick="playAudio()" type="button" id="play-pause">
+                                                    <audio id="track">
+                                                        <source src="images/song.mp3" type="audio/mpeg" />
+                                                    </audio>
+                                                    <img src="images/play.png" class="img-play" alt="Heicor | Icon Play">
+                                                    <img src="images/pause.png" class="img-pause" alt="Heicor | Icon pause">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-xl-6">
+                            <div class="selected-artist">
+                                <div class="music-disc">
+                                    <img src="images/music-disc.png" alt="Heicor | Disc">
+                                    <div class="artist-pshnotification">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="updateArtist">
+                                            <label for="updateArtist">Send me update on this artist.</label>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="artist-details">
+                                    <h1>Amazing Arijit</h1>
+                                    <p>Arijit Singh <a href="#" title="All Songs">10 Songs</a></p>
+                                    <p class="about-artist">
+                                        Arijit Singh was born on 25 April 1987 in Jiaganj, Murshidabad, West Bengal to Kakkar Singh, a Sikh father and a Bengali mother. He began his music training at a very young age at home. His maternal aunt trained in Indian classical music, and his maternal grandmother used to sing.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="subscribe-plan">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="white-card">
+                                            <div class="sub-option">
+                                                <h4 class="heading">Subscription</h4>
+                                                <div class="radio ml-auto">
+                                                    <input id="radio-1" name="radio" type="radio">
+                                                    <label for="radio-1" class="radio-label"></label>
+                                                </div>
+                                            </div>
+                                            <h5>One Month</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="white-card">
+                                            <div class="sub-option">
+                                                <h4 class="heading">Subscription</h4>
+                                                <div class="radio ml-auto">
+                                                    <input id="radio-2" name="radio" type="radio">
+                                                    <label for="radio-2" class="radio-label"></label>
+                                                </div>
+                                            </div>
+                                            <h5>Six Month</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="white-card">
+                                            <div class="sub-option">
+                                                <h4 class="heading">Subscription</h4>
+                                                <div class="radio ml-auto">
+                                                    <input id="radio-3" name="radio" type="radio">
+                                                    <label for="radio-3" class="radio-label"></label>
+                                                </div>
+                                            </div>
+                                            <h5>One Year</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-calc text-right">
+                                    <h1>Price: $ 16.99</h1>
+                                    <a href="#" class="btn-theme">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-xl-3">
+                            <div class="albums-wrapper">
+                                <h4 class="heading">Choose an album</h4>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Album 01">
+                                            <div class="alum-list">
+                                                <span class="counter">01</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster01.png" alt="Heicor | Poster01">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Malang - Unleash the madness</p>
+                                                    <span>6 Songs, 30 mins 9 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 02">
+                                            <div class="alum-list">
+                                                <span class="counter">02</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster02.png" alt="Heicor | Poster02">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>KGF Chapter 1</p>
+                                                    <span>6 Songs, 18 mins 38 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 03">
+                                            <div class="alum-list">
+                                                <span class="counter">03</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster03.png" alt="Heicor | Poster03">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Shaadi Mein Zaroor Aana</p>
+                                                    <span>11 Songs, 44 mins 37 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 04">
+                                            <div class="alum-list">
+                                                <span class="counter">04</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster04.png" alt="Heicor | Poster04">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Yaariyan</p>
+                                                    <span>13 Songs, 1hr 2 min</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 01">
+                                            <div class="alum-list">
+                                                <span class="counter">05</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster01.png" alt="Heicor | Poster01">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Malang - Unleash the madness</p>
+                                                    <span>6 Songs, 30 mins 9 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 02">
+                                            <div class="alum-list">
+                                                <span class="counter">06</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster02.png" alt="Heicor | Poster02">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>KGF Chapter 1</p>
+                                                    <span>6 Songs, 18 mins 38 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 03">
+                                            <div class="alum-list">
+                                                <span class="counter">07</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster03.png" alt="Heicor | Poster03">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Shaadi Mein Zaroor Aana</p>
+                                                    <span>11 Songs, 44 mins 37 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 04">
+                                            <div class="alum-list">
+                                                <span class="counter">08</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster04.png" alt="Heicor | Poster04">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Yaariyan</p>
+                                                    <span>13 Songs, 1hr 2 min</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 01">
+                                            <div class="alum-list">
+                                                <span class="counter">09</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster01.png" alt="Heicor | Poster01">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Malang - Unleash the madness</p>
+                                                    <span>6 Songs, 30 mins 9 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 02">
+                                            <div class="alum-list">
+                                                <span class="counter">10</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster02.png" alt="Heicor | Poster02">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>KGF Chapter 1</p>
+                                                    <span>6 Songs, 18 mins 38 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 03">
+                                            <div class="alum-list">
+                                                <span class="counter">11</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster03.png" alt="Heicor | Poster03">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Shaadi Mein Zaroor Aana</p>
+                                                    <span>11 Songs, 44 mins 37 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 04">
+                                            <div class="alum-list">
+                                                <span class="counter">12</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster04.png" alt="Heicor | Poster04">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Yaariyan</p>
+                                                    <span>13 Songs, 1hr 2 min</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 04">
+                                            <div class="alum-list">
+                                                <span class="counter">13</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster04.png" alt="Heicor | Poster04">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Yaariyan</p>
+                                                    <span>13 Songs, 1hr 2 min</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Album 01">
+                                            <div class="alum-list">
+                                                <span class="counter">14</span>
+                                                <div class="album-avatar">
+                                                    <img src="images/poster01.png" alt="Heicor | Poster01">
+                                                </div>
+                                                <div class="album-info">
+                                                    <p>Malang - Unleash the madness</p>
+                                                    <span>6 Songs, 30 mins 9 Sec</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom-select.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

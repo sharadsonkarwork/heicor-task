@@ -1,0 +1,717 @@
+/* ===================================
+    Table of Content
+====================================== */
+
+/*  - Fonts
+    - General
+    - Header
+    - Main
+    - Select Dropdown
+    - Wave
+    - Checkbox
+    - Media Query
+    
+*/
+
+/* ===================================
+    Google font
+====================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+/* ===================================
+    General
+====================================== */
+
+body {font-family: 'Roboto', sans-serif; font-size: 16px;color: #2e2e2e;font-weight:400;line-height: 26px;overflow-x: hidden;-webkit-font-smoothing: antialiased;background-color: #15182B;letter-spacing: 0.5px;}
+p{margin-bottom: 0;}
+a {color:inherit;}
+::-webkit-scrollbar-track {background-color: #15182B;border-left: 1px solid #000;}
+::-webkit-scrollbar {width: 7px;background-color: #fff;border-radius: 10px;}
+::-webkit-scrollbar-thumb {background: #fff;border-radius: 10px;}
+a:hover, a:active {color: #EE5253;text-decoration: none;}
+a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {outline: none;text-decoration: none}
+.form-group {margin: 20px 0;}
+.form-control {padding: 10px 20px;min-height: 45px;border-radius: 10px;}
+.form-control::placeholder {color: #2e2e2e;opacity: 1;}  .form-control:-ms-input-placeholder {color: #2e2e2e;}  .form-control::-ms-input-placeholder {color: #2e2e2e;}
+a, *::before, *::after, img, span, input, button, .navbar, .fixedmenu, .tp-bullet, .owl-dot, .owl-prev, .owl-next {transition: ease-in-out 0.2s;-webkit-transition: ease-in-out 0.2s;-moz-transition: ease-in-out 0.2s;-ms-transition: ease-in-out 0.2s;-o-transition: ease-in-out 0.2s;}
+ul{list-style: none;padding: 0; margin: 0;}
+:focus{outline: none;}
+img {max-width: 100%}
+.btn-theme {
+    border: none;
+    outline: none;
+    background: #EE5253;
+    color: #fff;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.raido-label{
+    margin-bottom: 0;
+}
+.radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+.radio input[type="radio"] + .radio-label:before {
+    content: '';
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #707070;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.radio input[type="radio"]:checked + .radio-label:before {
+    background-color: #EE5253;
+    box-shadow: inset 0 0 0 4px #fff;
+}
+.radio input[type="radio"]:focus + .radio-label:before {
+    outline: none;
+    border-color: #EE5253;
+}
+
+/* ===================================
+    Header
+====================================== */
+header{
+    padding: 20px 25px;
+}
+nav.navbar{
+    padding: 0;
+}
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+.drp-menu .nav-link {
+    padding: 0 0 10px;
+}
+.acc-profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.user-avatar {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 5px;
+}
+.avatar-name {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    right: 0;
+    left: auto;
+    background: #15182B;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0 0 0 / 0.25);
+    width: 100%;
+    border: none;
+}
+.dropdown-menu::before {
+    height: 28px;
+    width: 39px;
+    background: url(../images/dropdown-caret-up.png)no-repeat;
+    top: -21px;
+    right: 27px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+}
+a.dropdown-item {
+    color: rgb(255 255 255 / 0.6);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 11px 30px;
+}
+a.dropdown-item:hover, a.dropdown-item:focus{
+    background-color: #EE5253;
+    color: #fff;
+}
+.drp-caret{
+    margin-left: 15px;
+}
+/* ===================================
+    Main
+====================================== */
+.main-body {
+    padding: 70px 25px 0;
+}
+.breadcrumbs-wrapper {
+    margin-top: 20px;
+}
+.breadcrumb{
+    background: transparent;
+    padding: 0;
+}
+.breadcrumb > li.breadcrumb-item > a {
+    color: rgb(255 255 255 / 0.60);
+    font-size: 18px;
+}
+.breadcrumb > li.breadcrumb-item.active{
+    color: #EE5253;
+    font-size: 18px;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-right: 20px;
+    content: "";
+    background: url(../images/right-arrow.png) no-repeat;
+    width: 8px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 20px;
+}
+.breadcrumb > li.breadcrumb-item > a:hover{
+    color: #EE5253;
+}
+.music-card-wrapper {
+    padding-top: 50px;
+}
+/* ===================================
+    Select dropdown
+====================================== */
+button.select-dropdown-button {
+    width: 100%;
+    padding: 0;
+    background: #fff url(../images/down-arrow-b.png) no-repeat;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #2e2e2e;
+    border-radius: 10px;
+    background-position: 94% 50%;
+}
+.select-dropdown-list {
+    position: absolute;
+    display: block;
+    right: 0;
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    z-index: 2;
+    width: 92%;
+    left: 15px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    margin-top: -5px;
+}
+.select-dropdown-list.active {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+}
+.select-dropdown-list-item {
+    display: block;
+    padding: 10px 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    text-align: left;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+.select-dropdown-list-item:hover {
+    background-color: #EE5253;
+    color: #fff;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+}
+
+.related-artist-wrapper {
+    padding-top: 45px;
+}
+.heading {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.list-show li{
+    margin-bottom: 20px;
+}
+.white-card {
+    background: #fff;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0 0 0 /0.16);
+    padding: 8px;
+}
+.artist-avartar {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 12px;
+}
+.artist-info span {
+    display: block;
+    font-size: 14px;
+    color: rgb(46 46 46 / 0.40);
+    line-height: 17px;
+}
+.icon-play {
+    background: #EE5253;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-left: auto;
+    margin-right: 16px;
+    box-shadow: 0 3px 6px rgba(0 0 0 / 0.16);
+}
+.icon-play a{
+    display: block;
+}
+.popular-track-wrapper.list-show {
+    margin-top: 10px;
+}
+.song-name {
+    font-size: 14px;
+}
+.song-info span {
+    font-size: 14px;
+    color: rgb(46 46 46 / 0.40);
+}
+.artist-details {
+    color: #fff;
+    padding-left: 20px;
+    max-width: 50%;
+}
+.artist-details p a {
+    color: #EE5253;
+}
+.selected-artist {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.artist-details h1 {
+    font-size: 50px;
+}
+.music-disc {
+    max-width: 50%;
+}
+.about-artist {
+    font-size: 14px;
+}
+.subscribe-plan {
+    padding: 124px 0 0;
+}
+.sub-option {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sub-option .heading{
+    color: #2e2e2e;
+}
+.price-calc{
+    margin-top: 40px;
+}
+.price-calc h1{
+    color: #fff;
+    margin-bottom: 18px;
+}
+.price-calc a.btn-theme {
+    padding: 20px 40px;
+    display: inline-block;
+    color: #fff;
+}
+.play .img-pause {
+    display: none;
+}
+.pause .img-play {
+    display: none;
+}
+.alum-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.counter {
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(255 255 255 / 0.20);
+    margin-right: 5px;
+}
+.album-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.album-info {
+    color: #fff;
+    font-weight: 400;
+}
+.album-info span {
+    font-weight: lighter;
+    font-size: 14px;
+}
+.alum-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -mos-transition: all 0.3s ease-in-out;
+}
+.alum-list:hover {
+    box-shadow: 0 10px 20px rgb(159 159 159 / 19%), 0 6px 6px rgba(0,0,0,0.23);
+    background: #fff;
+}
+.alum-list:hover span.counter{
+    color: rgb(45 46 46 / 0.20);
+}
+.alum-list:hover .album-info{
+   color: #2e2e2e
+}
+.albums-wrapper ul {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 640px;
+    overflow: auto;
+}
+.albums-wrapper ul::-webkit-scrollbar-track {background: #15182B;border-left: 1px solid #000;margin: 10px 0;}
+.albums-wrapper ul::-webkit-scrollbar {width: 7px;background-color: transparent;border-radius: 10px;}
+.albums-wrapper ul::-webkit-scrollbar-thumb {background: #fff;border-radius: 10px;}
+/* ===================================
+    wave
+====================================== */
+.wave {
+    height: 35px;
+    width: 80px;
+    position: relative;
+    margin-left: auto;
+}
+
+.bar {
+    background: #EE5253;
+    bottom: 1px;
+    height: 34px;
+    position: absolute;
+    width: 3px;
+    animation: sound 0ms -800ms linear infinite alternate;
+}
+ 
+@keyframes sound {
+    0% {
+        height: 3px; 
+    }
+    100% {    
+        height: 34px;        
+    }
+}
+ 
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms;height: 32px; }
+.bar:nth-child(2)  { left: 9px; animation-duration: 433ms;height: 27px;}
+.bar:nth-child(3)  { left: 17px; animation-duration: 407ms;height: 14px;}
+.bar:nth-child(4)  { left: 25px; animation-duration: 458ms;height: 17px;}
+.bar:nth-child(5)  { left: 33px; animation-duration: 400ms;height: 24px;}
+.bar:nth-child(6)  { left: 41px; animation-duration: 427ms;height: 20px;}
+.bar:nth-child(7)  { left: 50px; animation-duration: 441ms;height: 34px;}
+.bar:nth-child(8)  { left: 58px; animation-duration: 419ms;height: 27px;}
+.bar:nth-child(9)  { left: 66px; animation-duration: 487ms;height: 14px;}
+.bar:nth-child(10)  { left: 74px; animation-duration: 467ms;height: 8px; }
+/* ===================================
+    Checkbox
+====================================== */
+.artist-pshnotification .artist-pshnotification .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+.artist-pshnotification .form-group label {
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+}
+.artist-pshnotification .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 6px;
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    border-radius: 5px;
+}
+.artist-pshnotification .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 8px;
+    height: 18px;
+    border: solid #EE5253;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+/* ===================================
+    Media Query
+====================================== */
+
+@media only screen and (max-width: 1600.99px){
+    .artist-avartar {
+        height: 70px;
+        width: 70px;
+    }
+    .song-name{
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .album-info p{
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+@media only screen and (max-width: 1475.99px){
+    .album-info span {
+        font-weight: lighter;
+        font-size: 12px;
+    }
+    .subscribe-plan {
+        padding: 90px 0 0;
+    }
+    .artist-info span{
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .artist-details h1 {
+        font-size: 40px;
+    }
+    .alum-list{
+        padding: 5px 0;
+    }
+    .albums-wrapper ul{
+        padding: 5px;
+    }
+}
+@media only screen and (max-width: 1366.99px){
+    .sub-option .heading {
+        font-size: 18px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    .artist-avartar {
+        height: 60px;
+        width: 60px;
+    }
+    .icon-play{
+        margin-right: 0;
+    }
+    header {
+        padding: 20px 10px;
+    }
+    .main-body {
+        padding: 70px 10px 0;
+    }
+    .album-avatar {
+        height: 45px;
+        width: 45px;
+    }
+    .counter {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 1190.99px){
+    .album-avatar {
+        height: 55px;
+        width: 55px;
+    }
+    .counter {
+        font-size: 35px;
+        margin-right: 15px;
+    }
+    .album-info p {
+        width: auto;
+    }
+    .albums-wrapper {
+        padding-top: 20px;
+    }
+}
+@media only screen and (max-width: 991.99px){
+    .artist-info span {
+        width: auto;
+    }
+    .popular-track-wrapper .icon-play {
+        margin-left: 30px;
+    }
+    .song-name {
+        width: auto;
+    }
+    .selected-artist {
+        padding-top: 40px;
+    } 
+    .subscribe-plan {
+        padding: 40px 0 0;
+    }
+    .select-dropdown-list{
+        width: 97%;
+    }
+}
+@media only screen and (max-width: 767.99px){
+    .white-card{
+        margin-bottom: 20px;
+    }
+    .selected-artist{
+        flex-direction: column;
+    }
+    .music-disc {
+        max-width: 100%;
+    }
+    .artist-details {
+        padding-left: 0;
+        max-width: 100%;
+    }
+    .albums-wrapper ul {
+        padding: 20px;
+    }
+    .price-calc {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 495.99px){
+    header {
+        padding: 20px 0px;
+    }
+    .navbar-brand {
+        max-width: 150px;
+    }
+    .avatar-name {
+        font-size: 16px;
+    }
+    .main-body {
+        padding: 70px 0;
+    }
+    .price-calc h1 {
+        font-size: 32px;
+    }
+    .album-info p {
+        width: 150px;
+    }
+    .breadcrumb > li.breadcrumb-item > a {
+        font-size: 16px;
+    }
+    .breadcrumb > li.breadcrumb-item.active {
+        font-size: 16px;
+    }
+    .artist-details h1 {
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 375.99px){
+    .navbar-brand {
+        max-width: 100px;
+    }
+    .navbar-brand {
+        max-width: 100px;
+    }
+    .drp-menu .nav-link {
+        padding: 0;
+    }
+    .drp-caret {
+        margin-left: 5px;
+    }
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 5px;
+    }
+    .breadcrumb-item+.breadcrumb-item::before {
+        padding-right: 15px;
+    }
+    .song-name {
+        width: 100px;
+    }
+    .wave {
+        width: 50px;
+        overflow: hidden;
+    }
+    .artist-info span {
+        width: 100px;
+    }
+    .albums-wrapper ul {
+        padding: 10px;
+    }
+    .album-info {
+        width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .price-calc h1 {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 280.99px){
+    .user-avatar{
+        display: none;
+    }
+}
